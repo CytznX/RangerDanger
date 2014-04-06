@@ -38,11 +38,14 @@ class videoReciever():
 			decimg=cv2.imdecode(data,1)
 			cv2.imshow('SERVER',decimg)
 
-			if data == None: 
+			wtkey = cv2.waitKey(5)
+			ifs data == None: 
 				break
-			elif cv2.waitKey(5) == 1048603:
+			elif wtkey == 1048603:
 				cv2.destroyAllWindows()
 				break
+			else:
+				print  cv2.waitKey(5)
 		self.s.close()
 
 if __name__ == '__main__':
