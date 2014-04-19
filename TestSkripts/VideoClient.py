@@ -15,7 +15,7 @@ class VideoForwarder():
 
 		self.Interface = cv2.VideoCapture(0)
 
-		self.TCP_IP = 'localhost'
+		self.TCP_IP = raw_input("Where To(Ip Addr): ")
 		self.TCP_PORT = 5001
 
 		self.sock = socket.socket()

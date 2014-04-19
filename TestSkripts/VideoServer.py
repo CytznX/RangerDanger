@@ -10,7 +10,7 @@ class videoReciever():
 	"""
 	def __init__(self,):
 
-		self.TCP_IP = 'localhost'
+		self.TCP_IP = ''
 		self.TCP_PORT = 5001
 		self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		self.s.bind((self.TCP_IP, self.TCP_PORT))
@@ -39,7 +39,7 @@ class videoReciever():
 			cv2.imshow('SERVER',decimg)
 
 			wtkey = cv2.waitKey(5)
-			ifs data == None: 
+			if data == None: 
 				break
 			elif wtkey == 1048603:
 				cv2.destroyAllWindows()
